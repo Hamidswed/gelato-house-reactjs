@@ -1,42 +1,73 @@
 @import "tailwindcss";
-@import "./theme.css";
+
 
 @theme {
-  --color-primary: var(--color-primary);
-  --color-primary-dark: var(--color-primary-dark);
-  --color-secondary: var(--color-secondary);
-  --color-secondary-dark: var(--color-secondary-dark);
-  --color-success: var(--color-success);
-  --color-danger: var(--color-danger);
-  --color-warning: var(--color-warning);
-  --color-info: var(--color-info);
-  --color-light: var(--color-light);
-  --color-dark: var(--color-dark);
-  --color-white: var(--color-white);
-  --color-black: var(--color-black);
-  --color-gray: var(--color-gray);
-  --color-gray-dark: var(--color-gray-dark);
-  --color-gray-light: var(--color-gray-light);
-  --color-gray-lighter: var(--color-gray-lighter);
+    --color-primary-50: #ebfffd;
+    --color-primary-100: #cdfffd;
+    --color-primary-200: #a1fffe;
+    --color-primary-300: #60feff;
+    --color-primary-400: #18f2f8;
+    --color-primary-500: #00d5de;
+    --color-primary-600: #00b3c4;
+    --color-primary-700: #088696;
+    --color-primary-800: #106b7a;
+    --color-primary-900: #125967;
+    --color-primary-950: #053b47;
+
+    /* Secondary Colors */
+    --color-secondary-50: #fdf3ff;
+    --color-secondary-100: #fbe7ff;
+    --color-secondary-200: #f7ceff;
+    --color-secondary-300: #f3a7ff;
+    --color-secondary-400: #ee72ff;
+    --color-secondary-500: #e13df8;
+    --color-secondary-600: #c81ddc;
+    --color-secondary-700: #b916c8;
+    --color-secondary-800: #8c1395;
+    --color-secondary-900: #74157a;
+    --color-secondary-950: #4e0052;
 }
 
 @layer components {
   .btn {
-    @apply px-4 py-2 rounded-md cursor-pointer transition-all duration-300 border border-transparent;
+    @apply rounded-xl cursor-pointer transition-all duration-300 border border-transparent;
   }
-  .btn-primary {
-    @apply bg-primary text-white hover:bg-primary-dark ;
+
+  /* contained variants */
+  .btn-contained-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700;
   }
-  .btn-secondary {
-    @apply bg-secondary text-white hover:bg-secondary-dark;
+  .btn-contained-secondary {
+    @apply bg-secondary-600 text-white hover:bg-secondary-700;
   }
-  .btn-outline {
-    @apply border-gray text-gray-dark hover:bg-gray-light;
+
+  /* outline variants */
+  .btn-outline-primary {
+    @apply border-primary-600 text-primary-600 hover:bg-primary-50;
   }
-  .btn-ghost {
-    @apply bg-transparent text-gray-dark hover:bg-gray-light;
+  .btn-outline-secondary {
+    @apply border-secondary-600 text-secondary-600 hover:bg-secondary-50;
   }
-  .btn-link {
-    @apply text-primary underline hover:text-primary-dark;
+
+  /* ghost variants */
+  .btn-ghost-primary {
+    @apply bg-transparent text-primary-600 hover:bg-primary-50;
+  }
+  .btn-ghost-secondary {
+    @apply bg-transparent text-secondary-600 hover:bg-secondary-50;
+  }
+  .btn-ghost-black {
+    @apply bg-transparent text-gray-500 hover:bg-gray-100
+  }
+
+  
+  .btn-sm {
+    @apply text-sm px-2 py-1;
+  }
+  .btn-md {
+    @apply text-base px-4 py-2;
+  }
+  .btn-lg {
+    @apply text-lg px-6 py-3;
   }
 }
