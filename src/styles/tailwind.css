@@ -1,1 +1,42 @@
 @import "tailwindcss";
+@import "./theme.css";
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-secondary: var(--color-secondary);
+  --color-secondary-dark: var(--color-secondary-dark);
+  --color-success: var(--color-success);
+  --color-danger: var(--color-danger);
+  --color-warning: var(--color-warning);
+  --color-info: var(--color-info);
+  --color-light: var(--color-light);
+  --color-dark: var(--color-dark);
+  --color-white: var(--color-white);
+  --color-black: var(--color-black);
+  --color-gray: var(--color-gray);
+  --color-gray-dark: var(--color-gray-dark);
+  --color-gray-light: var(--color-gray-light);
+  --color-gray-lighter: var(--color-gray-lighter);
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md cursor-pointer transition-all duration-300 border border-transparent;
+  }
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark ;
+  }
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-dark;
+  }
+  .btn-outline {
+    @apply border-gray text-gray-dark hover:bg-gray-light;
+  }
+  .btn-ghost {
+    @apply bg-transparent text-gray-dark hover:bg-gray-light;
+  }
+  .btn-link {
+    @apply text-primary underline hover:text-primary-dark;
+  }
+}

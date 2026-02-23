@@ -5,7 +5,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className="container mx-auto">{children}</main>
       <Footer />
     </>
   );
